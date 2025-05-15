@@ -6,13 +6,13 @@ export default function ProductCard({ product }) {
     const navigate = useNavigate();
     const goToDetails = () => navigate(`/product/${product.id}`);
 
-    // Styles
+    // Neon + Light Pink Theme Styles
     const cardStyle = {
         width: "250px",
-        backgroundColor: "#fff",
-        color: "#333",
-        borderRadius: "8px",
-        boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
+        backgroundColor: "#ffe4ec", // Light pink
+        color: "#ff1493", // Deep neon pink
+        borderRadius: "12px",
+        boxShadow: "0 4px 15px rgba(255, 20, 147, 0.3)",
         overflow: "hidden",
         margin: "15px",
         fontFamily: "'Roboto', sans-serif",
@@ -28,53 +28,54 @@ export default function ProductCard({ product }) {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        height: "100%"
+        height: "100%",
     };
 
     const imageStyle = {
         width: "100%",
         height: "200px",
         objectFit: "cover",
-        borderRadius: "8px",
+        borderRadius: "12px",
         transition: "transform 0.3s ease"
     };
 
     const titleStyle = {
-        fontSize: "16px",
+        fontSize: "18px",
         fontWeight: "bold",
-        margin: "10px 0",
-        color: "#333"
+        margin: "12px 0 6px",
+        color: "#ff1493"
     };
 
     const priceStyle = {
-        color: "#FF5722", // e-commerce standard price color
+        color: "#ff2e63", // neon pink-red
         fontSize: "18px",
         marginBottom: "8px",
+        fontWeight: "bold"
     };
 
     const detailsText = {
-        color: "#888",
+        color: "#c83bff", // neon purple
         fontSize: "14px",
-        marginTop: "8px",
+        marginTop: "6px",
         fontWeight: "normal"
     };
 
     const buttonStyle = {
-        backgroundColor: "#FF5722", // standard orange for action
+        backgroundColor: "#ff5e78", // neon coral
         color: "#fff",
         border: "none",
-        padding: "12px 0",
+        padding: "14px 0",
         fontSize: "16px",
         fontWeight: "bold",
         cursor: "pointer",
         width: "100%",
-        borderBottomLeftRadius: "8px",
-        borderBottomRightRadius: "8px",
+        borderBottomLeftRadius: "12px",
+        borderBottomRightRadius: "12px",
         transition: "background-color 0.3s ease",
     };
 
     const handleHover = (e, hover) => {
-        e.target.style.backgroundColor = hover ? "#e55e2a" : "#FF5722";
+        e.target.style.backgroundColor = hover ? "#ff2e63" : "#ff5e78";
     };
 
     return (
